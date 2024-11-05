@@ -1,0 +1,8 @@
+C:\dt\testingcore\pro-asp.net-core-6-main newest but some empty\pro-asp.net-core-6-main\03 - Your First ASP.NET Core Application\PartyInvites\obj\Release\net6.0\PubTmp\Out\PartyInvites.exe
+C:\dt\testingcore\pro-asp.net-core-6-main newest but some empty\pro-asp.net-core-6-main\03 - Your First ASP.NET Core Application\PartyInvites\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\dt\testingcore\pro-asp.net-core-6-main newest but some empty\pro-asp.net-core-6-main\03 - Your First ASP.NET Core Application\PartyInvites\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\dt\testingcore\pro-asp.net-core-6-main newest but some empty\pro-asp.net-core-6-main\03 - Your First ASP.NET Core Application\PartyInvites\obj\Release\net6.0\PubTmp\Out\global.json
+C:\dt\testingcore\pro-asp.net-core-6-main newest but some empty\pro-asp.net-core-6-main\03 - Your First ASP.NET Core Application\PartyInvites\obj\Release\net6.0\PubTmp\Out\PartyInvites.dll
+C:\dt\testingcore\pro-asp.net-core-6-main newest but some empty\pro-asp.net-core-6-main\03 - Your First ASP.NET Core Application\PartyInvites\obj\Release\net6.0\PubTmp\Out\PartyInvites.deps.json
+C:\dt\testingcore\pro-asp.net-core-6-main newest but some empty\pro-asp.net-core-6-main\03 - Your First ASP.NET Core Application\PartyInvites\obj\Release\net6.0\PubTmp\Out\PartyInvites.runtimeconfig.json
+C:\dt\testingcore\pro-asp.net-core-6-main newest but some empty\pro-asp.net-core-6-main\03 - Your First ASP.NET Core Application\PartyInvites\obj\Release\net6.0\PubTmp\Out\PartyInvites.pdb

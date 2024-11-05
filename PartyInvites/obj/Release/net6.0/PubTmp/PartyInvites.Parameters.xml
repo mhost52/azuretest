@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="PartyInvites20241105083153" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\dt\\testingcore\\pro-asp\.net-core-6-main\ newest\ but\ some\ empty\\pro-asp\.net-core-6-main\\03\ -\ Your\ First\ ASP\.NET\ Core\ Application\\PartyInvites\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
