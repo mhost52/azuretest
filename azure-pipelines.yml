@@ -33,11 +33,8 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: AzureRmWebAppDeployment@4
+
+- task: DotNetCoreCLI@2
   inputs:
-    ConnectionType: 'PublishProfile'
-    PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
-    PublishProfilePassword: 'test'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-
-
+    command: 'publish'
+    publishWebProjects: true
