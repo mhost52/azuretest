@@ -40,3 +40,8 @@ steps:
     publishWebProjects: true
     zipAfterPublish: true
 
+- task: DownloadBuildArtifacts@1
+  inputs:
+    buildType: 'current'
+    downloadType: 'single'
+    downloadPath: '$(System.ArtifactsDirectory)'
