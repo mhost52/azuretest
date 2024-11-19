@@ -44,4 +44,4 @@ steps:
   inputs:
     buildType: 'current'
     downloadType: 'single'
-    downloadPath: '$(System.ArtifactsDirectory)'
+    downloadPath: '$(build.artifactStagingDirectory)'
