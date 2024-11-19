@@ -41,11 +41,3 @@ steps:
     zipAfterPublish: false
  
  
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Concierge Subscription(34a2652f-71cb-417e-9f46-6f2ea784b496)'
-    WebAppName: 'devoptest'
-    Package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    ResourceGroupName: 'learn-d96b97c5-56db-43cc-9244-0ddc7b0de71b'
-    SlotName: 'production'
