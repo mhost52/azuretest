@@ -39,3 +39,10 @@ steps:
     command: 'publish'
     publishWebProjects: true
     zipAfterPublish: false
+
+- task: AzureWebApp@1
+  inputs:
+    appType: 'webApp'
+    appName: 
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
