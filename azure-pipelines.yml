@@ -38,12 +38,5 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
-    zipAfterPublish: false
- 
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+    zipAfterPublish: true
+
