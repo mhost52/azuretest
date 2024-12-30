@@ -1,13 +1,6 @@
-name: Build and Deploy PartyInvites
-
-on:
-  push:
-    branches: [ "main" ] # Trigger on pushes to the "main" branch
-
 jobs:
   build-and-deploy:
     runs-on: windows-latest
-    working-directory: ./PartyInvites
     steps:
       - uses: actions/checkout@v4
 
@@ -19,11 +12,14 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
+      - name: Publish with dotnet
+        run: dotnet publish --configuration Release --output ./publish
+
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          path: ./publish
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -31,5 +27,5 @@ jobs:
         with:
           app-name: 'PartyInvites20241105083153'
           slot-name: 'Production'
-          package: .
+          package: ./publish
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_457292A92CDA40CD87A57E77291063A6 }}
