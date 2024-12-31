@@ -1,11 +1,20 @@
 name: 'Azure Test Action'
-description: 'An example action for testing Azure deployment.'
+description: 'An example action for deploying to Azure.'
 inputs:
-  example-input:
-    description: 'An example input'
+  azure-webapp-name:
+    description: 'Name of the Azure Web App'
     required: true
-    default: 'Hello World'
+  azure-webapp-package-path:
+    description: 'Path to the web app package'
+    required: true
+  azure-publish-profile:
+    description: 'Azure publish profile'
+    required: true
 
 runs:
   using: 'node12'
   main: 'index.js'
+
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
