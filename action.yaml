@@ -1,0 +1,11 @@
+name: 'Azure Test Action'
+description: 'An example action for testing Azure deployment.'
+inputs:
+  example-input:
+    description: 'An example input'
+    required: true
+    default: 'Hello World'
+
+runs:
+  using: 'node12'
+  main: 'index.js'
