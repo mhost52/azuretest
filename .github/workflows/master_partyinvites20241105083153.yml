@@ -42,12 +42,12 @@ jobs:
         run: dotnet publish --configuration Release --no-build --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
         working-directory: PartyInvites
 
-      - name: Run custom Azure action
-        uses: mhost52/azuretest@master
+      - name: Deploy to Azure Web App
+        uses: Azure/webapps-deploy@v2
         with:
-          azure-webapp-name: ${{ env.AZURE_WEBAPP_NAME }}
-          azure-webapp-package-path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-          azure-publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
 
       - name: Publish Artifacts
         uses: actions/upload-artifact@v4.0.0
