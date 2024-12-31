@@ -11,7 +11,7 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: webcoba
-  AZURE_WEBAPP_PACKAGE_PATH: './published'
+  AZURE_WEBAPP_PACKAGE_PATH: 'PartyInvites/published'
   NETCORE_VERSION: '6.*.*'
   AZURE_WEBAPP_PUBLISH_PROFILE: '<publishData><publishProfile profileName="webcoba - Web Deploy" publishMethod="MSDeploy" publishUrl="webcoba-hpbxftfmhubcd9by.scm.canadacentral-01.azurewebsites.net:443" msdeploySite="webcoba" userName="$webcoba" userPWD="GuZif7EaguD32avcs06Gl9nqQhjjJfoiBawrGsxramyqXx9SZ45Chmdjigd3" destinationAppUrl="https://webcoba-hpbxftfmhubcd9by.canadacentral-01.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="https://portal.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="webcoba - FTP" publishMethod="FTP" publishUrl="ftps://waws-prod-yt1-079.ftp.azurewebsites.windows.net/site/wwwroot" ftpPassiveMode="True" userName="webcoba\$webcoba" userPWD="GuZif7EaguD32avcs06Gl9nqQhjjJfoiBawrGsxramyqXx9SZ45Chmdjigd3" destinationAppUrl="https://webcoba-hpbxftfmhubcd9by.canadacentral-01.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="https://portal.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="webcoba - Zip Deploy" publishMethod="ZipDeploy" publishUrl="webcoba-hpbxftfmhubcd9by.scm.canadacentral-01.azurewebsites.net:443" userName="$webcoba" userPWD="GuZif7EaguD32avcs06Gl9nqQhjjJfoiBawrGsxramyqXx9SZ45Chmdjigd3" destinationAppUrl="https://webcoba-hpbxftfmhubcd9by.canadacentral-01.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="https://portal.azure.com" webSystem="WebSites"><databases /></publishProfile></publishData>'
 
@@ -44,17 +44,17 @@ jobs:
         working-directory: PartyInvites
 
       - name: Verify published directory
-        run: Get-ChildItem -Path PartyInvites/${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        run: Get-ChildItem -Path ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       - name: Deploy to Azure Web App
         uses: Azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          package: PartyInvites/${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
           publish-profile: ${{ env.AZURE_WEBAPP_PUBLISH_PROFILE }}
 
       - name: Publish Artifacts
         uses: actions/upload-artifact@v4.0.0
         with:
           name: webapp
-          path: PartyInvites/${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+          path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
