@@ -44,7 +44,7 @@ jobs:
         working-directory: PartyInvites
 
       - name: Verify published directory
-        run: ls -al PartyInvites/${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        run: Get-ChildItem -Path PartyInvites/${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       - name: Deploy to Azure Web App
         uses: Azure/webapps-deploy@v2
