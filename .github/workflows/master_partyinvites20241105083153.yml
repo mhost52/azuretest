@@ -39,9 +39,15 @@ jobs:
         run: dotnet test --no-build
         working-directory: PartyInvites
 
+      - name: List PartyInvites directory before publishing
+        run: Get-ChildItem -Path PartyInvites
+
       - name: Publish app for deploy
         run: dotnet publish --configuration Release --no-build --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
         working-directory: PartyInvites
+
+      - name: List PartyInvites directory after publishing
+        run: Get-ChildItem -Path PartyInvites
 
       - name: Verify published directory
         run: Get-ChildItem -Path ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
